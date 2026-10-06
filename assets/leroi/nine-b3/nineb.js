@@ -45,15 +45,19 @@
   @keyframes nb9-sun{0%,100%{opacity:0}50%{opacity:1}}
   @keyframes nb9-glint{0%{background-position:120% 0}22%{background-position:-20% 0}100%{background-position:-20% 0}}
   @keyframes nb9-reveal{from{filter:brightness(.55)}to{filter:none}}
+  /* الجوال: نفس البانر العريض، مقصوصاً أقرب إلى القوس والقنينة، ونصّ أكبر بالنسبة */
+  .nb9-media{position:absolute;inset:0}
   @media (max-width:767px){
-    .nb9{aspect-ratio:auto;background:#111315}
-    .nb9-media{position:relative;aspect-ratio:1/1;overflow:hidden}
-    .nb9-media::after{content:"";position:absolute;left:0;right:0;bottom:0;height:26%;background:linear-gradient(0deg,#111315,rgba(17,19,21,0))}
-    .nb9-vig{display:none}
-    .nb9-copy{position:relative;left:auto;top:auto;transform:none;margin:-10% 7% 0;padding-bottom:9%}
-    .nb9-brand{font-size:10px}.nb9-name{font-size:clamp(46px,15vw,84px)}.nb9-meta{font-size:9px;letter-spacing:.26em}.nb9-cta{font-size:10px;margin-top:22px}
+    .nb9{aspect-ratio:3100/1714}
+    .nb9-stage{transform-origin:78% 62%}
+    .nb9-vig{background:linear-gradient(90deg,rgba(8,8,10,.8) 0%,rgba(8,8,10,.5) 26%,rgba(8,8,10,.1) 44%,rgba(8,8,10,0) 58%),
+      radial-gradient(ellipse 80% 100% at 62% 55%,rgba(0,0,0,0) 55%,rgba(0,0,0,.4) 100%)}
+    .nb9-copy{left:5.5%;transform:translateY(-50%)}
+    .nb9-brand{font-size:clamp(7px,2.1vw,10px);letter-spacing:.45em}
+    .nb9-name{font-size:clamp(24px,7.6vw,40px);margin:.28em 0 .32em}
+    .nb9-meta{display:none}
+    .nb9-cta{font-size:clamp(7px,2vw,10px);margin-top:clamp(10px,3.4vw,18px);letter-spacing:.3em}
   }
-  @media (min-width:768px){.nb9-media{position:absolute;inset:0}}
   @media (prefers-reduced-motion:reduce){.nb9 *{animation:none!important;transition:none!important}.nb9 [data-in]{opacity:1;transform:none;filter:none}}
   `;
   function masks(el, mob) {
