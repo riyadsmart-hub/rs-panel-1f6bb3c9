@@ -29,10 +29,13 @@
     radial-gradient(ellipse 75% 95% at 62% 55%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%)}
   .nb9-copy{position:absolute;left:6%;top:50%;transform:translateY(-54%);z-index:2}
   .nb9-brand{font-size:clamp(9px,.72vw,14px);letter-spacing:.55em;color:#D2BE8A;line-height:1}
-  .nb9-name{margin:.22em 0 .3em;font-size:clamp(40px,5.3vw,104px);line-height:1;letter-spacing:.05em;color:#F1ECE2;text-shadow:0 2px 24px rgba(0,0,0,.35);white-space:nowrap}
+  .nb9-name{margin:.22em 0 .32em;font-size:clamp(40px,5.3vw,104px);line-height:1;letter-spacing:.05em;color:#F1ECE2;text-shadow:0 2px 24px rgba(0,0,0,.35);white-space:nowrap}
   .nb9-name span{display:inline-block}
+  .nb9-tag{margin:0 0 .9em;font-size:clamp(8px,.72vw,14px);line-height:1.65;letter-spacing:.24em;color:rgba(241,236,226,.88);white-space:nowrap}
+  .nb9-ar{margin:0 0 1.6em;font-family:var(--lr-body,'IBM Plex Sans Arabic'),system-ui,sans-serif;font-size:clamp(12px,1.05vw,20px);line-height:1.5;
+    letter-spacing:0;word-spacing:.12em;color:rgba(241,236,226,.72);direction:rtl;unicode-bidi:isolate;text-align:left}
   .nb9-meta{font-size:clamp(8px,.62vw,12px);letter-spacing:.42em;color:rgba(241,236,226,.8);line-height:1;white-space:nowrap}
-  .nb9-cta{display:inline-block;margin-top:clamp(18px,3vw,58px);font-size:clamp(8px,.62vw,12px);letter-spacing:.34em;color:#D2BE8A;line-height:1;
+  .nb9-cta{display:inline-block;margin-top:clamp(14px,2.2vw,44px);font-size:clamp(8px,.62vw,12px);letter-spacing:.34em;color:#D2BE8A;line-height:1;
     padding-bottom:.6em;border-bottom:1px solid currentColor;transition:letter-spacing .5s cubic-bezier(.2,.7,.2,1)}
   a:hover .nb9-cta{letter-spacing:.42em}
   /* دخول النصّ مرّة واحدة */
@@ -55,7 +58,8 @@
     .nb9-copy{left:5.5%;transform:translateY(-50%)}
     .nb9-brand{font-size:clamp(7px,2.1vw,10px);letter-spacing:.45em}
     .nb9-name{font-size:clamp(24px,7.6vw,40px);margin:.28em 0 .32em}
-    .nb9-meta{display:none}
+    .nb9-meta,.nb9-tag{display:none}
+    .nb9-ar{font-size:clamp(9px,2.9vw,14px);margin:0 0 .2em}
     .nb9-cta{font-size:clamp(7px,2vw,10px);margin-top:clamp(10px,3.4vw,18px);letter-spacing:.3em}
   }
   @media (prefers-reduced-motion:reduce){.nb9 *{animation:none!important;transition:none!important}.nb9 [data-in]{opacity:1;transform:none;filter:none}}
@@ -74,8 +78,10 @@
       '<div class="nb9-cloud"></div><div class="nb9-sun"></div><div class="nb9-glint"></div></div><div class="nb9-vig"></div></div>' +
       '<div class="nb9-copy"><div class="nb9-brand" data-in style="transition-delay:.1s">LE ROI</div>' +
       '<div class="nb9-name" data-in style="transition-delay:.3s"><span>NINE</span></div>' +
-      '<div class="nb9-meta" data-in style="transition-delay:.75s">EAU DE PARFUM &nbsp;—&nbsp; 75 ML</div>' +
-      '<span class="nb9-cta" data-in style="transition-delay:1s">DISCOVER</span></div>';
+      '<div class="nb9-tag" data-in style="transition-delay:.6s">ELEGANCE THAT SPEAKS,<br>A PRESENCE THAT LASTS.</div>' +
+      '<div class="nb9-ar" data-in style="transition-delay:.8s" dir="rtl" lang="ar">أناقةٌ تتحدّث، وحضورٌ يدوم</div>' +
+      '<div class="nb9-meta" data-in style="transition-delay:.95s">EAU DE PARFUM &nbsp;—&nbsp; 75 ML</div>' +
+      '<span class="nb9-cta" data-in style="transition-delay:1.15s">DISCOVER</span></div>';
     masks(el, mob);
     var img = el.querySelector('img');
     var go = function () {
