@@ -34,6 +34,8 @@
   .nb9-tag{margin:0 0 .9em;font-size:clamp(8px,.72vw,14px);line-height:1.65;letter-spacing:.24em;color:rgba(241,236,226,.88);white-space:nowrap}
   .nb9-ar{margin:0 0 1.6em;font-family:var(--lr-body,'IBM Plex Sans Arabic'),system-ui,sans-serif;font-size:clamp(12px,1.05vw,20px);line-height:1.5;
     letter-spacing:0;word-spacing:.12em;color:rgba(241,236,226,.72);direction:rtl;unicode-bidi:isolate;text-align:left}
+  /* ثيم LR9 يفرض Lucidity على كل شيء بـ!important — والعربية تحتاج خطّ الموقع العربي */
+  .nb9 .nb9-ar{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif!important}
   .nb9-meta{font-size:clamp(8px,.62vw,12px);letter-spacing:.42em;color:rgba(241,236,226,.8);line-height:1;white-space:nowrap}
   .nb9-cta{display:inline-block;margin-top:clamp(14px,2.2vw,44px);font-size:clamp(8px,.62vw,12px);letter-spacing:.34em;color:#D2BE8A;line-height:1;
     padding-bottom:.6em;border-bottom:1px solid currentColor;transition:letter-spacing .5s cubic-bezier(.2,.7,.2,1)}
