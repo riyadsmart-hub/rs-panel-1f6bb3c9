@@ -32,10 +32,10 @@
   .nb9-name{margin:.22em 0 .32em;font-size:clamp(40px,5.3vw,104px);line-height:1;letter-spacing:.05em;color:#F1ECE2;text-shadow:0 2px 24px rgba(0,0,0,.35);white-space:nowrap}
   .nb9-name span{display:inline-block}
   .nb9-tag{margin:0 0 .9em;font-size:clamp(8px,.72vw,14px);line-height:1.65;letter-spacing:.24em;color:rgba(241,236,226,.88);white-space:nowrap}
-  .nb9-ar{margin:0 0 1.6em;font-family:var(--lr-body,'IBM Plex Sans Arabic'),system-ui,sans-serif;font-size:clamp(12px,1.05vw,20px);line-height:1.5;
+  .nb9-ar{margin:0 0 1.6em;font-family:var(--lr-body,'IBM Plex Sans Arabic'),system-ui,sans-serif;font-size:clamp(14px,1.32vw,25px);line-height:1.45;
     letter-spacing:0;word-spacing:.12em;color:rgba(241,236,226,.72);direction:rtl;unicode-bidi:isolate;text-align:left}
   /* ثيم LR9 يفرض Lucidity على كل شيء بـ!important — والعربية تحتاج خطّ الموقع العربي */
-  .nb9 .nb9-ar{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif!important}
+  .nb9 .nb9-ar{font-family:'Amiri','IBM Plex Sans Arabic',serif!important}
   .nb9-meta{font-size:clamp(8px,.62vw,12px);letter-spacing:.42em;color:rgba(241,236,226,.8);line-height:1;white-space:nowrap}
   .nb9-cta{display:inline-block;margin-top:clamp(14px,2.2vw,44px);font-size:clamp(8px,.62vw,12px);letter-spacing:.34em;color:#D2BE8A;line-height:1;
     padding-bottom:.6em;border-bottom:1px solid currentColor;transition:letter-spacing .5s cubic-bezier(.2,.7,.2,1)}
@@ -61,7 +61,7 @@
     .nb9-brand{font-size:clamp(7px,2.1vw,10px);letter-spacing:.45em}
     .nb9-name{font-size:clamp(24px,7.6vw,40px);margin:.28em 0 .32em}
     .nb9-meta,.nb9-tag{display:none}
-    .nb9-ar{font-size:clamp(9px,2.9vw,14px);margin:0 0 .2em}
+    .nb9-ar{font-size:clamp(11px,3.6vw,17px);margin:0 0 .15em}
     .nb9-cta{font-size:clamp(7px,2vw,10px);margin-top:clamp(10px,3.4vw,18px);letter-spacing:.3em}
   }
   @media (prefers-reduced-motion:reduce){.nb9 *{animation:none!important;transition:none!important}.nb9 [data-in]{opacity:1;transform:none;filter:none}}
@@ -100,6 +100,7 @@
   function mount() {
     var sec = document.querySelector('section[component-id="' + COMPONENT + '"]'); if (!sec) return false;
     var a = sec.querySelector('a.banner') || sec.querySelector('a'); if (!a) return false;
+    if (!document.getElementById('nb9-amiri')) { var lk = document.createElement('link'); lk.id = 'nb9-amiri'; lk.rel = 'stylesheet'; lk.href = 'https://fonts.googleapis.com/css2?family=Amiri:wght@400&display=swap'; document.head.appendChild(lk); }
     if (!document.getElementById('nb9-css')) { var st = document.createElement('style'); st.id = 'nb9-css'; st.textContent = CSS; document.head.appendChild(st); }
     build(a); return true;
   }
